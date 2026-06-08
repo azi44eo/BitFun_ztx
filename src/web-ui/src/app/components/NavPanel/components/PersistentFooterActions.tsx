@@ -156,6 +156,7 @@ const PersistentFooterActions: React.FC = () => {
                 aria-label={t('nav.moreOptions')}
                 aria-expanded={menuOpen}
                 onClick={toggleMenu}
+                data-testid="nav-footer-more-btn"
               >
                 {menuOpen ? (
                   <MoreVertical size={15} aria-hidden="true" />
@@ -177,6 +178,7 @@ const PersistentFooterActions: React.FC = () => {
                 <div
                   className={`bitfun-nav-panel__footer-menu${menuClosing ? ' is-closing' : ''}`}
                   role="menu"
+                  data-testid="nav-footer-menu"
                 >
                   <Tooltip
                     content={t('header.remoteConnectRequiresWorkspace')}
@@ -219,6 +221,7 @@ const PersistentFooterActions: React.FC = () => {
                     className="bitfun-nav-panel__footer-menu-item"
                     role="menuitem"
                     onClick={handleOpenSettings}
+                    data-testid="nav-footer-settings-item"
                   >
                     <Settings size={14} />
                     <span>{t('shared:features.settings')}</span>
@@ -244,6 +247,7 @@ const PersistentFooterActions: React.FC = () => {
               aria-label={t('scenes.shell')}
               aria-pressed={showSceneNav && navSceneId === 'shell'}
               onClick={handleOpenShell}
+              data-testid="nav-footer-shell-btn"
             >
               <span className="bitfun-nav-panel__footer-btn-icon-swap" aria-hidden="true">
                 <SquareTerminal size={15} className="bitfun-nav-panel__footer-btn-icon-swap-default" />
@@ -259,6 +263,7 @@ const PersistentFooterActions: React.FC = () => {
               aria-label={t('scenes.browser')}
               aria-pressed={isBrowserActive}
               onClick={handleOpenBrowser}
+              data-testid="nav-footer-browser-btn"
             >
               <span className="bitfun-nav-panel__footer-btn-icon-swap" aria-hidden="true">
                 <Globe size={15} className="bitfun-nav-panel__footer-btn-icon-swap-default" />
